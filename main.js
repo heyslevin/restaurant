@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pageload_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pageload.js */ \"./src/pageload.js\");\n/* harmony import */ var _tab1_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tab1.js */ \"./src/tab1.js\");\n\n\n\n\nObject(_pageload_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\nObject(_tab1_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//Query Selector\n\nlet container = document.querySelector(\"#content\")\n\n//HTML Content\n\ncontainer.innerhtml = \"tits\";\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pageload_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pageload.js */ \"./src/pageload.js\");\n/* harmony import */ var _tab1_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tab1.js */ \"./src/tab1.js\");\n/* harmony import */ var _tabAbout_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tabAbout.js */ \"./src/tabAbout.js\");\n\n\n\n\n\nObject(_pageload_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\nObject(_tab1_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//Query Selector\n\nlet container = document.querySelector(\"#content\")\n\n//HTML Content\n\ncontainer.innerhtml = \"tits\";\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -119,6 +119,18 @@ eval("__webpack_require__.r(__webpack_exports__);\nconst pageload = () => {\n\n\
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\nconst tab1 = () => {\n\t\n\t\n\tconst content = document.querySelector(\"#content\");\n\n\tcontent.innerHTML += `\n\n\t\t\t<div class=\"contentbox\">\n\t\t\t\t<div class=\"tabscontainer\">\n\n\t\t\t\t\t<div class=\"tab\" data-id=\"0\">\n\t\t\t\t\t\tZero\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"tab\" data-id=\"1\">\n\t\t\t\t\t\tOne\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"tab\" data-id=\"2\">\n\t\t\t\t\t\tTwo\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t<div class=\"tab\" data-id=\"3\">\n\t\t\t\t\t\tThree\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"tabcontent\">\n\t\t\t\t\t\t\t<p>Hello there</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t`;\n\n\t//Selector\n\tvar tabs = document.querySelectorAll(\".tab\");\n\tvar tabcontent = document.querySelector(\".tabcontent\");\n\n\t//Tab Object\n\tvar tabAbout = ` \n\t\t<h1>Our Story</h1>\n\t\t<p>We started from the bottom, now we're here</p>\n\n\n\t\t`;\n\n\t//Add event listener\n\n\t\t// tabs.forEach((tab)=> {\n\t\t// \ttab.addEventListener(\"click\", () => {\n\t\t// \t\talert(\"works\");\n\t\t// \t});\n\t\t// });\n\n\tfor (let i = 0; i < tabs.length; i++) {\n\t\ttabs[i].setAttribute(\"data-id\",i)\n\t\ttabs[i].addEventListener(\"click\",function(){\n\t\t\ttabSelector(i)});\n\t};\n\n\tfunction tabSelector(i) {\n\t\tswitch(i) {\n\t\t\tcase 0 :\n\t\t\t\ttabcontent.innerHTML = tabAbout;\n\t\t\t\tbreak;\n\t\t\tdefault:\n\t\t\t\talert(\"noContent\");\n\t\t}\n\t}\n\t\n\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (tab1);\n\n\n//# sourceURL=webpack:///./src/tab1.js?");
+
+/***/ }),
+
+/***/ "./src/tabAbout.js":
+/*!*************************!*\
+  !*** ./src/tabAbout.js ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction tabAbout() {\n\t\ttabcontent.innerHTML = ` \n\t\t<h1>Our Story</h1>\n\t\t<p>We started from the bottom, now we're here</p>\n\n\n\t\t`;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (tabAbout);\n\n//# sourceURL=webpack:///./src/tabAbout.js?");
 
 /***/ })
 
